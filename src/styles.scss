@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gap-1 {
+    gap: 0.5rem;
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+.my-2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 1rem;
+}
+
+.mt-1 {
+    margin-top: .25rem;
+}
+
+html,
+body {
+    margin: unset;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}

@@ -1,0 +1,50 @@
+<main class="main">
+  <div class="card">
+
+    <div class="flex justify-content-between">
+      <div class="left-side w-60">
+        <div>
+          <h1>Search</h1>
+        </div>
+        <div class="mb-2">
+          <input placeholder="Enter a text" (input)="filterPosts($event)" [(ngModel)]="searchText"
+            class="w-full text-input" type="text">
+        </div>
+        <div >
+          @for (item of filteredPosts;let index = $index; track index) {
+          <app-post [title]="item.title | highlight:searchText??''" [content]="item.content|highlight:searchText??''"
+            [date]="item.date" />
+          @if(index!=(filteredPosts.length-1)){
+          <div class="divider my-2"></div>
+          }
+          }
+        </div>
+      </div>
+
+      <div class="right-side card w-30">
+        <div>
+          <span class="bold">
+            bitsofcode.
+          </span>
+          Articles on Frontend Development. All articles are written by
+          <a href="/" target="_blank" class="link">Ire Aderinokun</a>
+          , Frontend Developer and User Interface Designer.
+        </div>
+        <div class="flex align-items-center gap-1 mt-2">
+          <div class="flex twitter-container align-items-center">
+            <div>
+              <img class="icon" src="assets/images/twitter-icon.svg">
+            </div>
+            <div>
+              Follow {{'@Ireaderinokun'}}
+            </div>
+          </div>
+          <div class="twitter-followers-contaner">
+            19.7K followers
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
